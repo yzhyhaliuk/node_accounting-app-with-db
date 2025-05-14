@@ -96,6 +96,8 @@ const update = async (req, res) => {
 
   if (!spentAt && !title && !amount && !category && !note) {
     res.status(400).send('Bad Request');
+
+    return;
   }
 
   const expense = await expensesService.update({

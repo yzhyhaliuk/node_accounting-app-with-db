@@ -39,7 +39,7 @@ async function deleteById(id) {
     return null;
   }
 
-  category.destroy();
+  await category.destroy();
 
   return category;
 }

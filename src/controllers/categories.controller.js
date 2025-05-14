@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
 };
 
 const getById = async (req, res) => {
-  const category = await categoryService.getById();
+  const category = await categoryService.getById(req.params.id);
 
   if (!category) {
     res.status(404).send('Not Found');

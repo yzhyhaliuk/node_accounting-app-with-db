@@ -66,6 +66,8 @@ async function deleteById(id) {
     }
 
     await expense.destroy();
+
+    return expense;
   } catch (error) {
     throw new Error('Error deleting expense');
   }
